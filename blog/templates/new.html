@@ -1,0 +1,10 @@
+<h1>새 글 작성하기</h1>
+
+<form action="{%url 'create'%}" method="post" enctype="multipart/form-data">
+    {%csrf_token%} 
+    제목 : <input type="text" name="title">
+    작성자 : <input type="text" name="writer">
+    본문 : <textarea name="body" id="" cols="30" rows="10"></textarea>
+    사진 : <input type="file" name="image" id="">
+    <button type="submit">제출</button>
+</form>
